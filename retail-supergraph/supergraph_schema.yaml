@@ -6,4 +6,4 @@ spec:
   selectors:
     - matchLabels:
         domain: retail
-  graphRef: fw-router-lab@main
+  graphRef: fw-graph-operator@current
