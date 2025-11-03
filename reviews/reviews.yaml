@@ -7,7 +7,7 @@ metadata:
   namespace: apollo-operator
 spec:
   endpoint: http://reviews
- schema:
+  schema:
     sdl: |
       # Your existing Federation v2 schema here
       extend schema
