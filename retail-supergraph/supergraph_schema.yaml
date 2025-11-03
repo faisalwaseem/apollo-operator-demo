@@ -6,4 +6,4 @@ spec:
   selectors:
     - matchLabels:
         domain: retail
-  graphRef: fw-new-operator@oprdemo
+  graphRef: fw-new-operator@ops1
