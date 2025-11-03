@@ -7,7 +7,17 @@ metadata:
   namespace: apollo-operator
 spec:
   endpoint: http://reviews
-  schema:
-    ociImage:
-      reference: ghcr.io/faisalwaseem/reviews:latest
-      path: /app/schema.graphql
+ schema:
+    sdl: |
+      # Your existing Federation v2 schema here
+      extend schema
+        @link(url: "https://specs.apollo.dev/federation/v2.0", import: ["@key", "@tag"])
+      type Query {
+        products: [Product!]!
+        product(id: ID!): Product
+      }
+      type Product @key(fields: "id") {
+        id: ID!
+        name: String!
+        price: Float!
+      }
